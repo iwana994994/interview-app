@@ -10,7 +10,7 @@ export const useProblems = create((set) => ({
     set({ isLoading: true, error: null });
 
     try {
-      const response = await axiosInstance.get("/problems");
+      const response = await axiosInstance.get("/problems/allProblems");
       set({ problems: response.data });
     } catch (error) {
       set({ error: error.response.data.message });
