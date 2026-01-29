@@ -14,12 +14,12 @@ const Dashboard = () => {
   return (
     <div>
       {
-        problems.map((problem) => (
-          <div key={problem._id}>
+        problems.map((problem => (
+          <div key={problem.id}>
             <h1>{problem.title}</h1>
             <p>{problem.question}</p>
           </div>
-        ))
+        )))
       }
     </div>
   );
