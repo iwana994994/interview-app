@@ -13,16 +13,14 @@ const Dashboard = () => {
 
   return (
     <div>
-      {Array.isArray(problems) ? (
+      {
         problems.map((problem) => (
           <div key={problem._id}>
             <h1>{problem.title}</h1>
             <p>{problem.question}</p>
           </div>
         ))
-      ) : (
-        <pre>{JSON.stringify(problems, null, 2)}</pre>
-      )}
+      }
     </div>
   );
 };
