@@ -1,9 +1,27 @@
-import React from 'react'
+import { useEffect } from "react";
+import { useProblems } from "../store/useProblems.js";
 
 const Dashboard = () => {
-  return (
-    <div>Dashboard</div>
-  )
-}
+  const { problems, fetchProblems, isLoading } = useProblems();
 
-export default Dashboard
+  useEffect(() => {
+    fetchProblems();
+  }, [fetchProblems]);
+
+  return (
+    <div>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        problems.map((problem) => (
+          <div key={problem._id}>
+            <h1>{problem.title}</h1>
+            <p>{problem.question}</p>
+          </div>
+        ))
+      )}
+    </div>
+  );
+};
+
+export default Dashboard;
