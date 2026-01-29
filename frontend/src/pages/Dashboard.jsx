@@ -15,7 +15,7 @@ const Dashboard = () => {
     <div>
       {
         problems.map((problem => (
-          <div key={problem.id}>
+          <div key={problem._id}>
             <h1>{problem.title}</h1>
             <p>{problem.question}</p>
           </div>
