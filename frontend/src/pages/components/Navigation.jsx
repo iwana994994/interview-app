@@ -1,6 +1,7 @@
 import { SignedOut, SignInButton,UserButton,SignedIn } from "@clerk/clerk-react"
 import { ArrowRightIcon, SparklesIcon } from "lucide-react"
 import { Link } from "react-router-dom"
+import Navigation2 from "./Navigation2"
 
 
 
@@ -34,7 +35,7 @@ const Navigation = () => {
       </SignedOut>
     
       <SignedIn>
-        <UserButton />
+        <Navigation2/>
       </SignedIn>
       
 </div>

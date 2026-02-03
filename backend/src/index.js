@@ -8,6 +8,10 @@ import { ENV } from "./lib/env.js";
 import { connectDB } from "./lib/db.js";
 import { inngest, functions } from "./lib/inngest.js";
 
+import ProblemsRoute from "./routes/ProblemsRoute.js"
+import InterviewsRoute from "./routes/InterviewsRoute.js"
+import streamRoutes from "./routes/ChatRoute.js"
+
 
 
 
@@ -27,6 +31,10 @@ app.use("/api/inngest", serve({ client: inngest, functions }));
 
 
 
+
+app.use("/api/problems",ProblemsRoute)
+app.use("/api/interviews",InterviewsRoute)
+app.use("/api/stream", streamRoutes)
 
 
 
