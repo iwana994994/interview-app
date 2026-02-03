@@ -7,7 +7,7 @@ import { clerkMiddleware } from "@clerk/express";
 import { ENV } from "./lib/env.js";
 import { connectDB } from "./lib/db.js";
 import { inngest, functions } from "./lib/inngest.js";
-import TransactionsRoute from "./routes/TransactionsRoute.js"
+
 
 
 
@@ -25,7 +25,7 @@ app.use(clerkMiddleware()); // this adds auth field to request object: req.auth(
 
 app.use("/api/inngest", serve({ client: inngest, functions }));
 
-app.use("/api/transactions",TransactionsRoute)
+
 
 
 
