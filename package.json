@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/iwana994994/Wallet-app/issues"
   },
-  "homepage": "https://github.com/iwana994994/Wallet-app#readme"
+  "homepage": "https://github.com/iwana994994/Wallet-app#readme",
+  "dependencies": {
+    "stream-chat": "^9.31.0"
+  }
 }
