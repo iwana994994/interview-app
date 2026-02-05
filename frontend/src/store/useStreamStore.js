@@ -18,12 +18,12 @@ export const useStreamStore = create((set, get) => ({
 
     try {
       // 1) VIDEO token
-      const vRes = await fetch(`http://localhost:5000/api/stream/video-token?userId=${user.id}`)
+      const vRes = await fetch(`/api/stream/video-token?userId=${user.id}`)
       const vData = await vRes.json()
       if (!vRes.ok) throw new Error(vData?.message || "Video token error")
 
       // 2) CHAT token (može isti token, ali kod tebe su dve rute => uzmi chat token)
-      const cRes = await fetch(`http://localhost:5000/api/stream/chat-token?userId=${user.id}`)
+      const cRes = await fetch(`/api/stream/chat-token?userId=${user.id}`)
       const cData = await cRes.json()
       if (!cRes.ok) throw new Error(cData?.message || "Chat token error")
 
