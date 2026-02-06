@@ -1,5 +1,5 @@
 import { Code2Icon, CodeIcon, DatabaseIcon, ZapIcon } from "lucide-react"
-import Navigation from "./components/Navigation"
+
 
 const HomePage = () => {
   return (
@@ -33,7 +33,7 @@ const HomePage = () => {
    </div>
    {/* Right Side */}
    <div className="w-full h-full m-6 tr-6">
- <img src="../../public/homePage.png" alt="hello" />
+ <img src="/homePage.png" alt="hello" />
    </div>
    
 </div>
